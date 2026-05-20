@@ -42,6 +42,26 @@ a {
   text-decoration: none;
 }
 
+/* Inline text links */
+.card__desc a,
+.about__text a,
+.contacts__intro a,
+p a {
+  color: var(--color-accent-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-soft-muted);
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.card__desc a:hover,
+.about__text a:hover,
+.contacts__intro a:hover,
+p a:hover {
+  color: var(--color-accent-soft-hover);
+  text-decoration-color: var(--color-accent-soft);
+}
+
 ul {
   list-style: none;
 }
