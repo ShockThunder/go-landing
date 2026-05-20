@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Обучение игре в го — индивидуальные и групповые занятия для новичков и любителей.">
   <title>Го с [Имя] — обучение игре в го</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/themes.css">
 </head>
 <body>
 
@@ -33,7 +34,11 @@
       <div class="hero__decor" aria-hidden="true">
         <span class="hero__kanji">碁</span>
       </div>
-      <img class="hero__stones" src="assets/stones.svg" alt="" width="120" height="120" aria-hidden="true">
+      <svg class="hero__stones" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+        <circle class="hero__stone hero__stone--black" cx="42" cy="52" r="22"/>
+        <circle class="hero__stone hero__stone--white" cx="78" cy="68" r="22"/>
+        <circle class="hero__stone hero__stone--black" cx="58" cy="88" r="16"/>
+      </svg>
       <div class="container hero__inner">
         <h1 class="hero__title">Обучение игре в го</h1>
         <p class="hero__subtitle">
@@ -48,8 +53,8 @@
       <div class="container">
         <h2 class="section__title">Обо мне</h2>
         <div class="about__content">
-          <div class="about__photo" aria-hidden="true">
-            <img src="assets/avatar.svg" alt="" width="160" height="160">
+          <div class="about__photo">
+            <img src="assets/photo.png" alt="[Имя]" width="160" height="160">
           </div>
           <div class="about__text">
             <p>
@@ -122,10 +127,17 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__inner">
       <p class="footer__text">&copy; 2026 Го с [Имя]</p>
+      <div class="theme-switcher" id="theme-switcher">
+        <button type="button" class="theme-switcher__toggle" id="theme-switcher-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="theme-switcher-menu">
+          Тема
+        </button>
+        <ul class="theme-switcher__menu" id="theme-switcher-menu" role="listbox" hidden></ul>
+      </div>
     </div>
   </footer>
 
+  <script src="js/theme-switcher.js"></script>
 </body>
 </html>
